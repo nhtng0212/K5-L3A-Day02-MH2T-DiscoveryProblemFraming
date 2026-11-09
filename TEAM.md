@@ -12,8 +12,8 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Đỗ Hoàng Minh | | Phụ trách research công cụ & phản biện kỹ thuật | |
-| 2 | Lê Quang Huy | | Phụ trách kiểm chứng (The Mom Test) & ghi chép | |
+| 1 | Đỗ Hoàng Minh | 2A202603507 | Phụ trách research công cụ & phản biện kỹ thuật | Mazzonthego |
+| 2 | Lê Quang Huy | 2A202603470 | Phụ trách kiểm chứng (The Mom Test) & ghi chép | lehuy20112002 |
 | 3 | Nguyễn Văn Tùng | 2A202603471 | Đề xuất bài toán chọn (Card #2), vẽ quy trình & Problem Statement | nguyenvantung-sec |
 | 4 | Nguyễn Hoàng Tùng | 2A202603481 | Nhóm trưởng, điều phối tiến trình & đánh giá 4 rủi ro | nhtng0212 |
 
@@ -112,3 +112,29 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 - Hiểu cách đặt câu hỏi phỏng vấn theo The Mom Test (hỏi về trải nghiệm thực tế quá khứ thay vì hỏi giả định tương lai để tránh nhận lời khen sáo rỗng).
 - Biết cách tổng hợp thông tin từ nhiều ý kiến phản biện để cùng nhóm chốt được 1 bài toán thực sự có giá trị.
+
+---
+
+### DoHoangMinh-2A202603507
+
+**Phần việc phụ trách:**
+
+- Phụ trách chính khâu nghiên cứu giải pháp thị trường (CP4 Research), rà soát các công cụ SOAR/SIEM hiện có.
+- Tham gia phản biện kỹ thuật, đánh giá tính khả thi và phân tích ma trận độ phức tạp × độ mơ hồ ở CP6.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Đề xuất 3 candidate ban đầu liên quan đến quản trị hạ tầng và ứng cứu sự cố trong bảng Pitch mục 2.1.
+- Tìm kiếm, kiểm tra trực tiếp đường link và hoàn thành bảng phân tích 3 công cụ (TheHive, Cortex XSOAR, D3 SOAR) chỉ rõ điểm mạnh, khoảng trống và bài học cho nhóm.
+- Đóng góp vào phần đánh giá rủi ro Feasibility và Viability (vấn đề chi phí bản quyền phần mềm SOAR đắt đỏ và rủi ro rò rỉ dữ liệu).
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- Đề cử candidate #1, #2, #3 trong bảng pitch mục 2.1 của `group_report.md`.
+- Mục 3.3 (Bảng research giải pháp đã có) trong `group_report.md`.
+- Mục 6.1 (Ma trận độ mơ hồ × độ phức tạp) và Mục 8.1 (Đánh giá rủi ro Feasibility) trong `group_report.md`.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhận ra rằng không nên vội vã xây dựng một công cụ mới khi chưa tìm hiểu kỹ các giải pháp đã có trên thị trường. Việc research kỹ lưỡng giúp nhóm nhận ra khoảng trống của các công cụ lớn (chi phí quá đắt và thiếu tùy biến cho doanh nghiệp vừa và nhỏ) để định hình đúng phạm vi bài toán.
+- Học được cách phản biện dựa trên dữ liệu và tính khả thi thay vì tranh luận theo cảm tính.
