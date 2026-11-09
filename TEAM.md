@@ -113,3 +113,25 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 - Hiểu cách đặt câu hỏi phỏng vấn theo The Mom Test (hỏi về trải nghiệm thực tế quá khứ thay vì hỏi giả định tương lai để tránh nhận lời khen sáo rỗng).
 - Biết cách tổng hợp thông tin từ nhiều ý kiến phản biện để cùng nhóm chốt được 1 bài toán thực sự có giá trị.
+
+---
+
+### DoHoangMinh-2A202603507
+
+**Phần việc phụ trách:**
+- Phụ trách chính khâu nghiên cứu giải pháp đã có trên thị trường (CP4 Research) và tham gia phản biện kỹ thuật.
+- Hỗ trợ xây dựng sơ đồ quy trình Before/After (CP5) và đánh giá rủi ro tính khả thi kỹ thuật (Feasibility) ở CP6.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+- Chuẩn bị và trình bày 3 Problem Cards cá nhân tại phiên Pitch CP3 (#1 Tổng hợp tin công nghệ mỗi sáng, #2 Tìm nguồn hàng xe đạp cũ và khách hàng trên Facebook/Chợ Tốt, #3 Hỗ trợ trả lời câu hỏi kỹ thuật lặp lại của nhân viên cho đội ngũ QA), trong đó Card #3 lọt vào bảng chấm điểm Shortlist của nhóm (28/35 điểm).
+- Đặt câu hỏi phản biện cho các thành viên khác về tính khả thi khi cào dữ liệu (anti-scraping) trên sàn TMĐT và rủi ro sai sót dữ liệu khi OCR hóa đơn mờ nhòe.
+- Tìm hiểu và hoàn thiện bảng phân tích 3 giải pháp thực tế (TheHive, Palo Alto Cortex XSOAR, D3 Security Smart SOAR) kèm link tài liệu, chỉ rõ điểm mạnh, khoảng trống và bài học áp dụng cho bài toán của nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- Đề cử candidate #1, #2, #3 trong bảng Pitch mục 2.1 và ứng viên số 3 trong bảng chấm điểm Shortlist mục 2.4 của `group_report.md`.
+- Mục 3.3 (Bảng Research giải pháp đã có) trong file `report/team/group_report.md`.
+- Đóng góp nhận định rủi ro Feasibility tại mục 8.1 trong `report/team/group_report.md`.
+
+**Điều mình học được từ phần nhóm:**
+- Nhận ra việc đi sâu làm rõ yêu cầu nghiệp vụ, nguồn dữ liệu và rủi ro bảo mật quan trọng hơn việc vội vã đề xuất công cụ hay giải pháp kỹ thuật khi chưa kiểm chứng ("solution-first").
+- Hiểu cách nghiên cứu các sản phẩm đã có trên thị trường để tìm ra khoảng trống thực sự (như hạn chế của static template hay rủi ro lộ dữ liệu khi dùng public cloud AI), từ đó xác định đúng mức độ can thiệp Workflow có con người kiểm duyệt (Human-in-the-loop).
