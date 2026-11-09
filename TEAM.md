@@ -41,21 +41,21 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- Đề xuất và trình bày pitch Problem Card #2 (Tự động hóa tổng hợp mốc thời gian và IoC để viết báo cáo sự cố an ninh mạng) — ý tưởng được nhóm MH2T chọn làm bài toán chung của cả nhóm.
+- Đề xuất và trình bày pitch Problem Card #2 (Candidate #8: Tự động hóa tổng hợp mốc thời gian và IoC để viết báo cáo sự cố an ninh mạng trên TheHive/Wazuh) — ý tưởng được nhóm MH2T chọn làm bài toán chung của cả nhóm (34/35 điểm).
 - Phụ trách chính khâu kiểm chứng thực tế (CP4): Phối hợp cùng Lê Quang Huy thiết lập Assumption Map và trực tiếp phỏng vấn Kỹ sư Incident Response theo phương pháp The Mom Test.
 - Trực tiếp vẽ sơ đồ quy trình Before (40 phút) và After (10 phút) chi tiết từng bước có cơ chế Human-in-the-loop.
 - Soạn thảo Problem Statement v0 và phối hợp cùng Nhóm trưởng Nguyễn Hoàng Tùng hoàn thiện Problem Statement v1.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Bảo vệ thành công bài toán viết báo cáo sự cố trước các câu hỏi phản biện của Minh, Huy và Hoàng Tùng; đưa ra giải pháp Locked Schema và On-premise LLM để giải quyết triệt để nỗi lo ảo giác dữ liệu và rò rỉ thông tin.
+- Bảo vệ thành công bài toán viết báo cáo sự cố trước các câu hỏi phản biện của Đỗ Hoàng Minh, Lê Quang Huy và Nguyễn Hoàng Tùng; đưa ra giải pháp Locked Schema và On-premise LLM để giải quyết triệt để nỗi lo ảo giác dữ liệu và rò rỉ thông tin.
 - Hoàn thành 2 Interview Snapshots trong `group_report.md` với các trích dẫn câu nói và bài học hành vi thực tế.
 - Đóng góp vào bảng so sánh 4 mức No AI / Rule / Workflow / Agent để bảo vệ mức chọn Workflow.
 - Cùng nhóm chốt quyết định Go với pilot 2 tuần trên sự cố Low/Medium.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- Đề cử candidate #2 trong bảng pitch mục 2.1 của `group_report.md`.
+- Đề cử candidate #7, #8, #9 trong bảng pitch mục 2.1 của `group_report.md`.
 - Mục 3.1 (Assumption Map) và mục 3.2 (Kiểm chứng The Mom Test) trong `group_report.md`.
 - Sơ đồ quy trình mục 4.1-4.2 và Problem Statement v0 (mục 5) trong `group_report.md`.
 - Phần đánh giá 4 rủi ro và quyết định Go (mục 8) trong `group_report.md`.
@@ -72,12 +72,13 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Phần việc phụ trách:**
 
 - Nhóm trưởng, điều phối tiến trình buổi lab của nhóm MH2T, phân công nhiệm vụ và kiểm soát thời gian.
-- Trình bày pitch Problem Card và đóng góp phản biện chính cho các bài toán của Minh, Huy và Văn Tùng.
+- Trình bày pitch Problem Card #1 (Candidate #10: Trích xuất quyết định và action items từ bản ghi âm/video cuộc họp) và đóng góp phản biện chính cho các bài toán của Đỗ Hoàng Minh, Lê Quang Huy và Nguyễn Văn Tùng.
 - Phối hợp cùng bạn Nguyễn Văn Tùng hoàn thiện sơ đồ quy trình tương lai và kiểm tra ranh giới an toàn (Boundary).
 - Chịu trách nhiệm chính hoàn thiện Problem Statement v1 kèm 4 tiêu chí eval và tổng kết đánh giá 4 rủi ro.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
+- Đề xuất 3 candidate (#10 Trích xuất quyết định & action items cuộc họp, #11 Đối chiếu rubric chấm điểm bài lab, #12 Nhập liệu hóa đơn đầu vào ảnh/PDF), trong đó bài #10 đạt 33/35 điểm trong shortlist.
 - Đặt câu hỏi phản biện then chốt giúp bạn Nguyễn Văn Tùng bổ sung cơ chế khóa cứng dữ liệu kỹ thuật (Locked Schema) để chống ảo giác (hallucination).
 - Cùng nhóm hoàn thành cây OST rút gọn (loại bỏ triệt để các solution trá hình).
 - Xây dựng bảng so sánh 4 mức độ can thiệp AI và thiết lập các tiêu chí eval định lượng trong Problem Statement v1.
@@ -85,7 +86,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- Đề cử candidate trong bảng pitch mục 2.1 của `group_report.md`.
+- Đề cử candidate #10, #11, #12 trong bảng pitch mục 2.1 của `group_report.md`.
 - Sơ đồ cây OST mục 2.3 và bảng chấm điểm mục 2.4 của `group_report.md`.
 - Mục 6.2 (So sánh 4 mức can thiệp) và Mục 7 (Problem Statement v1 + eval) trong `group_report.md`.
 - Mục 8 (Đánh giá 4 rủi ro và quyết định Go) trong `group_report.md`.
@@ -95,17 +96,20 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Nhận thức rõ ràng rằng trong an ninh mạng, việc giữ bí mật dữ liệu nội bộ (Data Privacy) và tính chính xác tuyệt đối của chứng cứ pháp lý quan trọng hơn việc chạy theo các công nghệ AI phức tạp.
 - Hiểu được giá trị của việc đặt ra ranh giới (Boundary): AI chỉ nên đóng vai trò trợ lực (Augmentation) cho con người ở khâu soạn thảo văn bản, còn dữ liệu kỹ thuật và quyền phê duyệt cuối cùng bắt buộc phải thuộc về chuyên gia.
 
+---
+
 ### lequanghuy-2A202603470
 
 **Phần việc phụ trách:**
 - Phụ trách kiểm chứng (The Mom Test) & ghi chép biên bản làm việc nhóm.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-- Chuẩn bị bộ câu hỏi phỏng vấn theo phương pháp The Mom Test để kiểm chứng bài toán chung của nhóm.
-- Trực tiếp phỏng vấn 2-3 đối tượng thật (người chịu ảnh hưởng bởi bài toán), ghi chép lại nguyên văn phản hồi (Interview Snapshots).
+- Đề xuất 3 candidate (#4 So sánh thông tin cấu hình đồ điện tử, #5 Phân loại chi tiêu phòng trọ, #6 Tổng hợp tin tức bóng đá) trong bảng Pitch mục 2.1.
+- Chuẩn bị bộ câu hỏi phỏng vấn theo phương pháp The Mom Test và phối hợp cùng Nguyễn Văn Tùng phỏng vấn đối tượng thật để kiểm chứng bài toán chung của nhóm, ghi chép lại nguyên văn phản hồi (Interview Snapshots).
 - Ghi chép nội dung các buổi họp nhóm, đóng góp ý kiến phản biện ở phần chấm điểm OST và chọn lựa bài toán tại CP3.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- Đề cử candidate #4, #5, #6 trong bảng pitch mục 2.1 của `group_report.md`.
 - Mục CP4: Bảng Assumption Map và bảng Interview Snapshots trong file `report/team/group_report.md`.
 - Mục CP3: Biên bản ghi chép họp nhóm và bảng chấm điểm candidate trong `group_report.md`.
 
@@ -124,7 +128,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Đề xuất 3 candidate ban đầu liên quan đến quản trị hạ tầng và ứng cứu sự cố trong bảng Pitch mục 2.1.
+- Đề xuất 3 candidate ban đầu (#1 Tổng hợp tin công nghệ mỗi sáng, #2 Quét tìm nguồn xe đạp cũ trên Facebook/Chợ Tốt, #3 Hỗ trợ trả lời câu hỏi kỹ thuật lặp lại cho QA) trong bảng Pitch mục 2.1.
 - Tìm kiếm, kiểm tra trực tiếp đường link và hoàn thành bảng phân tích 3 công cụ (TheHive, Cortex XSOAR, D3 SOAR) chỉ rõ điểm mạnh, khoảng trống và bài học cho nhóm.
 - Đóng góp vào phần đánh giá rủi ro Feasibility và Viability (vấn đề chi phí bản quyền phần mềm SOAR đắt đỏ và rủi ro rò rỉ dữ liệu).
 
