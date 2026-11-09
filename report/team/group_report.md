@@ -18,66 +18,70 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | Hoàng Minh | Khi có cảnh báo CVE mới công bố, muốn lọc nhanh danh sách máy chủ nội bộ phơi nhiễm để vá kịp thời | Sysadmin | SSH và kiểm tra phiên bản trên 50+ máy chủ (120 phút) | *"Nhiều máy chủ tắt hoặc nằm trong subnet cô lập thì lấy dữ liệu kiểu gì?"* (Hoàng Tùng hỏi) |
-| 2 | Hoàng Minh | Khi mạng bị tấn công từ chối dịch vụ (DDoS), muốn nhận diện nhanh dải IP tấn công để đẩy rule chặn lên Firewall | Kỹ sư Mạng | Lọc top IP trên log NetFlow/WAF mất 30 phút | *"Rule chặn tự động có nguy cơ chặn nhầm dải IP người dùng thật không?"* (Quang Huy hỏi) |
-| 3 | Hoàng Minh | Khi tài khoản nhân viên bị khóa do nhập sai mật khẩu, muốn tự động mở khóa sau khi xác thực để giảm tải IT | IT Helpdesk | Gọi điện xác minh nhân viên thủ công (15–20 phút/ticket) | *"Bài toán này dùng form OTP nội bộ là đủ, có cần giải pháp AI phức tạp không?"* (Văn Tùng hỏi) |
-| 4 | Quang Huy | Khi kết thúc ca trực, muốn tóm tắt nhanh các ticket còn đang mở để bàn giao ca sau | SOC Lead | Đọc lại chat group và lịch sử ticket (30 phút/ca) | *"Thông tin bàn giao có quy chuẩn sẵn chưa hay mỗi người viết một kiểu?"* (Hoàng Minh hỏi) |
-| 5 | Quang Huy | Khi phát hiện máy trạm nhiễm ransomware, muốn cô lập máy khỏi mạng ngay lập tức để tránh lây lan | SOC Tier 2 | Chờ kỹ sư hạ tầng đăng nhập switch cô lập VLAN (15–30 phút) | *"Bài này thuộc về quyền hạn (authorization) và quy trình hơn là phân tích thông tin?"* (Hoàng Tùng hỏi) |
-| 6 | Quang Huy | Khi có nhân sự mới vào đội SOC, muốn tra cứu nhanh playbook xử lý sự cố để xử lý đúng chuẩn | SOC Newbie | Tìm kiếm trong kho Wiki/Confluence nội bộ (20 phút/lần) | *"Playbook nội bộ đã được cập nhật chuẩn chỉnh chưa?"* (Văn Tùng hỏi) |
-| 7 | Văn Tùng | Khi một sự cố tấn công vừa được xử lý xong trên TheHive, muốn tự động tổng hợp mốc thời gian và IoC thành bản tường trình chuẩn chỉnh, để nộp quản lý đúng hạn mà không phải gõ tay | Incident Responder (Tier 2) | Gom log từ nhiều tab và gõ tay văn bản báo cáo (30–45 phút/phiếu) | *"Nếu AI bịa ra mốc thời gian hoặc ghi sai 1 địa chỉ IP trong báo cáo gửi CISO thì ai chịu trách nhiệm?"* (Hoàng Tùng hỏi) |
-| 8 | Văn Tùng | Khi có nhân viên báo cáo email đáng ngờ, muốn tự động bóc tách header và chạy sandbox để kết luận nhanh | SOC Analyst | Chờ chạy sandbox và phân tích URL thủ công (15–25 phút/mail) | *"Tốc độ phản hồi của API sandbox bên thứ ba có làm nghẽn hàng đợi không?"* (Quang Huy hỏi) |
-| 9 | Văn Tùng | Khi rà soát log định kỳ hàng tháng, muốn tổng hợp các vi phạm chính sách bảo mật để làm báo cáo audit | Compliance Officer | Gom log từ 5 hệ thống khác nhau vào Excel (4 tiếng/tháng) | *"Tần suất 1 tháng/lần liệu có đủ cấp bách so với các bài toán trực ca hàng ngày?"* (Hoàng Minh hỏi) |
-| 10 | Hoàng Tùng | Khi hệ thống SIEM đẩy hàng loạt cảnh báo lặp, muốn gom nhóm tự động để không phải click đóng thủ công hàng trăm lần | SOC Tier 1 | Tra cứu và đối chiếu IP thủ công (60–90 phút/ca) | *"Nếu gom nhóm nhầm một cảnh báo tấn công thật thì ai chịu trách nhiệm?"* (Văn Tùng hỏi) |
-| 11 | Hoàng Tùng | Khi nhận ticket đổi mật khẩu định kỳ của server, muốn tự động hóa kiểm tra độ mạnh mật khẩu | Sysadmin | Kiểm tra thủ công từng server (10 phút/máy) | *"Active Directory / GPO đã có sẵn tính năng này chưa?"* (Hoàng Minh hỏi) |
-| 12 | Hoàng Tùng | Khi nhân viên xin cấp quyền truy cập thư mục nhạy cảm, muốn đối soát ma trận phân quyền để phê duyệt | Quản lý dự án | Kiểm tra ma trận phân quyền thủ công (15 phút/yêu cầu) | *"Bài này thuần túy là phê duyệt hành chính (workflow approval)?"* (Quang Huy hỏi) |
+| 1 | Đỗ Hoàng Minh | Khi bắt đầu ngày mới, muốn có bản tóm tắt các tin công nghệ quan trọng từ nhiều nguồn để tiết kiệm thời gian | Content Creator, Nhà nghiên cứu | Lướt đọc chọn lọc và viết tóm tắt thủ công (50 phút/sáng) | *"Làm sao AI lọc được tin chuẩn xác, phân biệt được tin đồn và tin chính thống?"* (Nguyễn Hoàng Tùng hỏi) |
+| 2 | Đỗ Hoàng Minh | Khi cần tìm nguồn xe đạp cũ trên Facebook/Chợ Tốt, muốn hệ thống tự động quét bài đăng để kịp thời chốt mua | Chủ cửa hàng xe đạp cũ | Lướt bảng tin thủ công liên tục (2–3 tiếng/ngày) | *"Facebook và Chợ Tốt chặn bot crawl dữ liệu (anti-scraping) thì giải quyết thế nào?"* (Lê Quang Huy hỏi) |
+| 3 | Đỗ Hoàng Minh | Khi nhân viên hỏi lỗi trong thread chat, muốn hệ thống tự tra cứu kho tri thức cũ để trả lời ngay các lỗi quen thuộc | Thành viên QA, Quản lý dự án | Tra cứu lịch sử chat và gõ lại câu trả lời cũ (3–4 tiếng/ngày) | *"Nếu AI hiểu sai ngữ cảnh kỹ thuật và trả lời sai làm vỡ code thì ai chịu trách nhiệm?"* (Nguyễn Văn Tùng hỏi) |
+| 4 | Lê Quang Huy | Khi mua đồ điện tử giá trị cao, muốn có bảng so sánh thông số, cấu hình và giá giữa các sàn để không phải mở nhiều tab | Người tiêu dùng, Sinh viên | So sánh cấu hình và giá thực tế qua nhiều shop (3–4 tiếng) | *"Giá và voucher trên sàn TMĐT thay đổi liên tục theo giờ, dữ liệu cào về có kịp cập nhật không?"* (Đỗ Hoàng Minh hỏi) |
+| 5 | Lê Quang Huy | Khi cuối tháng đến hạn tính tiền nhà, muốn tự động phân loại chi tiêu chung/riêng và chia tiền cho từng người | Sinh viên ở ghép phòng trọ | Nhận diện khoản chi và tính toán chia tiền thủ công (45 phút/tháng) | *"Bài toán này dùng ứng dụng Splitwise hoặc Google Sheets lập sẵn công thức có đủ chưa?"* (Nguyễn Hoàng Tùng hỏi) |
+| 6 | Lê Quang Huy | Khi muốn cập nhật tình hình đội bóng yêu thích, muốn có bản Daily Recap tóm tắt lịch thi đấu, tỷ số và phong độ | Người hâm mộ thể thao | Mở nhiều trang/app rải rác để gom tin chấn thương (30–40 phút/sáng) | *"Nhu cầu này thuộc về sở thích cá nhân, giá trị kinh tế (Value) để thương mại hóa là gì?"* (Nguyễn Văn Tùng hỏi) |
+| 7 | Nguyễn Văn Tùng | Khi một vụ việc tấn công đã xử lý xong trên TheHive, muốn tự động tổng hợp mốc thời gian và IoC thành báo cáo chuẩn chỉnh để nộp CISO | Kỹ sư ứng cứu sự cố (Incident Responder Tier 2) | Mở nhiều tab gom log và tự gõ văn bản narrative mô tả sự cố (30–45 phút/phiếu) | *"Nếu AI bịa ra mốc thời gian hoặc ghi sai 1 địa chỉ IP trong báo cáo gửi CISO thì ai chịu trách nhiệm?"* (Nguyễn Hoàng Tùng hỏi) |
+| 8 | Nguyễn Văn Tùng | Khi hệ thống SIEM đẩy cảnh báo lặp lại, muốn tự động gom nhóm, kiểm tra danh tính IP và loại bỏ thông báo trùng lặp | SOC Tier 1 Analyst | Tra cứu và kiểm tra thủ công từng cảnh báo lặp (150–200 cảnh báo/ca, mất 3–5 phút/cảnh báo) | *"Làm sao xác định ngưỡng an toàn để tự động đóng ticket mà không bỏ sót tấn công thật?"* (Đỗ Hoàng Minh hỏi) |
+| 9 | Nguyễn Văn Tùng | Khi nhân viên báo cáo email lạ, muốn hệ thống tự động bóc tách headers và phân tích tệp đính kèm trong sandbox | SOC Analyst | Kiểm tra headers, bóc tách link và chờ chạy sandbox (15–25 phút/email) | *"Tốc độ phản hồi của API sandbox bên thứ ba có làm nghẽn hàng đợi lúc cao điểm không?"* (Lê Quang Huy hỏi) |
+| 10 | Nguyễn Hoàng Tùng | Khi kết thúc cuộc họp dự án 1–2 tiếng, muốn trích xuất các quyết định chính và action items kèm người phụ trách để gửi biên bản trước 17h | Project Coordinator, Scrum Master | Vừa nghe lại audio vừa tua tốc độ 1.5x và ghi chép nháp (60–75 phút/buổi họp) | *"Làm sao AI phân biệt được câu nói đùa với cam kết giao việc chính thức?"* (Nguyễn Văn Tùng hỏi) |
+| 11 | Nguyễn Hoàng Tùng | Khi chuẩn bị nộp bài lab trước hạn chót, muốn đối chiếu rubric với file repo để không bị trừ điểm oan vì sai cấu trúc | Sinh viên CNTT, Học viên | Mở từng file đọc rà soát đối chiếu thủ công từng tiêu chí (20–25 phút/bài) | *"Phần kiểm tra tên file và cấu trúc dùng shell script là đủ, AI can thiệp vào bước nào?"* (Lê Quang Huy hỏi) |
+| 12 | Nguyễn Hoàng Tùng | Khi nhận 200–300 hóa đơn đầu vào mỗi tháng, muốn nhập thông tin mã số thuế và tiền thuế vào phần mềm kế toán | Kế toán viên thuế | Gõ tay thông tin và số tiền từ file PDF/ảnh scan (10–12 tiếng/kỳ thuế) | *"Hóa đơn viết tay hoặc mờ nhòe thì lấy dữ liệu chuẩn ở đâu để tránh bị phạt thuế?"* (Đỗ Hoàng Minh hỏi) |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| **A — Giám sát & Xử lý cảnh báo (Alert Triage)** | #8 (Phân tích phishing), #10 (Gom cảnh báo SIEM), #2 (Lọc dải IP DDoS) | Cảnh báo xuất hiện dồn dập, tốn công sàng lọc và đối chiếu danh tính IP/URL thô |
-| **B — Ứng phó sự cố & Lập hồ sơ (Incident Response & Documentation)** | #7 (Báo cáo sự cố an ninh), #4 (Bàn giao ca trực), #5 (Cô lập máy trạm), #9 (Báo cáo audit) | Xảy ra sau khi phát hiện tấn công; đòi hỏi tổng hợp log từ nhiều nguồn thành văn bản kỹ thuật phục vụ quản lý và pháp lý |
-| **C — Vận hành quy trình & Quản trị hạ tầng (SecOps & IT Administration)** | #1 (Quét CVE máy chủ), #3 (Mở khóa tài khoản), #6 (Tra cứu playbook), #11 (Đổi mật khẩu), #12 (Duyệt quyền) | Quản lý cấu hình thiết bị, xử lý ticket nội bộ và tuân thủ quy trình hành chính |
+| **A — Tổng hợp & Tóm tắt thông tin phân tán (Information Aggregation)** | #1 (Tin công nghệ - Đỗ Hoàng Minh), #4 (So sánh đồ điện tử - Lê Quang Huy), #6 (Tin bóng đá - Lê Quang Huy), #10 (Tóm tắt cuộc họp - Nguyễn Hoàng Tùng) | Dữ liệu đầu vào dàn trải trên nhiều trang web/file âm thanh; người dùng mất hàng giờ lướt đọc và tổng hợp thủ công |
+| **B — Ứng phó sự cố an ninh & Phân tích kỹ thuật (Security Incident & Threat Ops)** | #7 (Báo cáo sự cố TheHive - Nguyễn Văn Tùng), #8 (Gom cảnh báo SIEM - Nguyễn Văn Tùng), #9 (Phân tích email lừa đảo - Nguyễn Văn Tùng) | Xử lý trong trung tâm điều hành an ninh mạng (SOC); áp lực thời gian lớn, đòi hỏi trích xuất chính xác log kỹ thuật và giảm tải kiệt sức (Alert/Work Fatigue) |
+| **C — Hỗ trợ quy trình vận hành & Kiểm tra tuân thủ (Workflow & Operations Support)** | #2 (Quét xe cũ - Đỗ Hoàng Minh), #3 (Hỏi đáp QA - Đỗ Hoàng Minh), #5 (Chi tiêu phòng trọ - Lê Quang Huy), #11 (Đối chiếu rubric - Nguyễn Hoàng Tùng), #12 (Nhập hóa đơn - Nguyễn Hoàng Tùng) | Tác vụ nghiệp vụ lặp đi lặp lại hàng ngày; quy trình có sẵn nhưng thao tác thủ công gây chậm trễ và sai sót |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: Rút ngắn thời gian lập hồ sơ báo cáo sau sự cố an ninh mạng mà vẫn đảm bảo 100% tính chính xác của dữ liệu chứng cứ kỹ thuật
-├── Opportunity 1: Kỹ sư phải mở nhiều tab công cụ (Wazuh, EDR, TheHive) để copy thủ công mốc thời gian và IoC
-├── Opportunity 2: Soạn thảo văn bản mô tả diễn biến tấn công (narrative) tốn nhiều thời gian và dễ sai lệch văn phong
-└── Opportunity 3: Báo cáo thường xuyên bị dồn ứ vào cuối tuần dẫn đến chậm trễ nộp cho CISO và kiểm toán
-     ✗ "Xây dựng Multi-Agent tự động viết và gửi báo cáo"   ← Solution, gạch khỏi cây OST
-     ✗ "Chatbot AI trả lời tự động cho lãnh đạo"            ← Solution, gạch khỏi cây OST
+OUTCOME: Rút ngắn 75% thời gian lập hồ sơ báo cáo sau sự cố an ninh mạng mà vẫn đảm bảo 100% tính chính xác của dữ liệu chứng cứ kỹ thuật
+├── Opportunity 1: Kỹ sư phải mở nhiều tab công cụ (Wazuh, EDR, TheHive) để copy thủ công mốc thời gian và IoC (mất 8-10 phút)
+├── Opportunity 2: Soạn thảo văn bản mô tả diễn biến tấn công (narrative) tốn nhiều thời gian (15-20 phút) và kỹ sư dễ bị kiệt sức
+└── Opportunity 3: Báo cáo thường xuyên bị dồn ứ vào cuối tuần dẫn đến 25% báo cáo tuần bị nộp trễ hạn cho CISO và kiểm toán
+     ✗ "Xây dựng Multi-Agent tự động viết và gửi báo cáo cho CISO"  ← Solution, gạch khỏi cây OST
+     ✗ "Chatbot AI trả lời tự động cho lãnh đạo"                   ← Solution, gạch khỏi cây OST
+     ✗ "Hệ thống tự động đóng ticket trên TheHive"                 ← Solution, gạch khỏi cây OST
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
-- *"Xây dựng Multi-Agent tự động viết và gửi báo cáo cho CISO"* (đây là giải pháp kỹ thuật, không phải nỗi đau của người dùng).
+- *"Xây dựng Multi-Agent tự động viết và gửi báo cáo cho CISO"* (đây là giải pháp kỹ thuật cụ thể, không phải nỗi đau của người dùng).
 - *"Hệ thống tự động đóng ticket trên TheHive"* (tập trung vào tính năng tự động hóa thay vì giải quyết sự tắc nghẽn ở khâu tổng hợp thông tin).
+- *"Chatbot AI tra cứu báo cáo"* (tính năng hỏi đáp, không giải quyết khâu lập báo cáo ban đầu).
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **1. Viết báo cáo sự cố an ninh mạng (#7 - Văn Tùng)** | 5 | 5 | 5 | 5 | 5 | 5 | 4 | **34** |
-| 2. Gom cảnh báo trùng lặp trong ca trực SOC (#10 - Hoàng Tùng) | 5 | 5 | 4 | 5 | 4 | 4 | 4 | 31 |
-| 3. Điều tra email lừa đảo (Phishing) (#8 - Văn Tùng) | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 28 |
+| **1. Viết báo cáo sự cố an ninh mạng (#7 - Nguyễn Văn Tùng)** | 5 | 5 | 5 | 5 | 5 | 5 | 4 | **34** |
+| **2. Trích xuất quyết định & action items cuộc họp (#10 - Nguyễn Hoàng Tùng)** | 5 | 5 | 5 | 4 | 4 | 5 | 4 | 32 |
+| **3. Hỗ trợ giải đáp câu hỏi kỹ thuật cho QA (#3 - Đỗ Hoàng Minh)** | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 28 |
 
-**Candidate được chọn:** Candidate #7 (Problem Card #2 của bạn Nguyễn Văn Tùng) — Tự động hóa hỗ trợ tổng hợp mốc thời gian (Timeline) và dấu hiệu nhận diện (IoC) để sinh bản báo cáo sự cố an ninh mạng trên TheHive/Wazuh.
+**Candidate được chọn:**
+Candidate #7 (Problem Card #2 của bạn **Nguyễn Văn Tùng**) — Tự động hóa hỗ trợ tổng hợp mốc thời gian (Timeline) và dấu hiệu nhận diện (IoC) để sinh bản báo cáo sự cố an ninh mạng (Incident Post-Mortem Report) trên TheHive/Wazuh.
 
 **Vì sao chọn:**
-1. Vấn đề "tốn thời gian hành chính làm báo cáo" là nỗi đau nhức nhối thực tế: mỗi phiếu sự cố mất từ 30–45 phút gõ tay; 25% báo cáo tuần bị nộp trễ hạn cho CISO.
-2. Dữ liệu đầu vào cực kỳ rõ ràng và tập trung (đã có sẵn trong database của TheHive và Wazuh SIEM qua REST API).
-3. Đo lường được số phút baseline rất chuẩn xác (khoảng 40 phút/phiếu).
-4. Khả năng ứng dụng AI vào việc tóm tắt văn bản (Narrative Generation) là thế mạnh vượt trội của LLM, đồng thời phân định rất rõ ràng giữa việc Rule trích xuất dữ liệu cứng (IoC) và AI diễn đạt ngôn ngữ.
+1. **Nỗi đau có thật và đo lường được:** Mỗi phiếu sự cố ngốn của kỹ sư từ 30–45 phút làm giấy tờ hành chính; 25% báo cáo tuần bị nộp trễ hạn cho CISO.
+2. **Dữ liệu đầu vào rõ ràng và tập trung:** Dữ liệu sự kiện, địa chỉ IP, mốc thời gian đã nằm sẵn trong database của TheHive và Wazuh SIEM, truy xuất được trực tiếp qua REST API.
+3. **Phân định ranh giới công nghệ cực kỳ sắc nét:** Cho phép kết hợp hoàn hảo giữa **Rule-based** (khóa cứng dữ liệu kỹ thuật IP/mã băm để chống ảo giác 100%) và **LLM** (soạn thảo đoạn văn diễn biến tấn công), dưới sự kiểm duyệt và phê duyệt của **Con người (Human-in-the-loop)**.
 
 **Vì sao loại các candidate còn lại:**
-- Candidate #10 (Gom cảnh báo SIEM): Mặc dù cấp bách nhưng một bộ Rule cứng hoặc tính năng Aggregation có sẵn trên SIEM đã có thể giải quyết được 70%, giá trị bổ sung của AI chưa thực sự mang tính đột phá bằng việc sinh văn bản báo cáo.
-- Candidate #8 (Email Phishing): Phụ thuộc lớn vào thời gian phản hồi và quota API của các sandbox bên thứ ba, rủi ro nghẽn luồng xử lý ngoài tầm kiểm soát của nhóm.
+- **Loại Candidate #10 (Tóm tắt cuộc họp - Nguyễn Hoàng Tùng):** Dù nỗi đau rõ ràng, nhưng các cuộc họp có nhiều tạp âm, người nói ngắt lời nhau và tiếng lóng, dẫn đến rủi ro trích xuất nhầm việc hoặc gán nhầm người cao hơn nhiều so với dữ liệu nhật ký sự cố có cấu trúc của an ninh mạng.
+- **Loại Candidate #3 (Hỏi đáp QA - Đỗ Hoàng Minh):** Kho tri thức trong chat thread thường bị phân tán, không có cấu trúc cố định và rủi ro AI trả lời sai dẫn đến việc lập trình viên triển khai nhầm tính năng.
+- **Loại Candidate #1 & #6 (Tin công nghệ / Bóng đá - Đỗ Hoàng Minh & Lê Quang Huy):** Thuộc về thói quen tin tức cá nhân, khó đo lường impact kinh tế và khó thương mại hóa.
+- **Loại Candidate #4 (So sánh đồ điện tử - Lê Quang Huy):** Vướng rào cản kỹ thuật anti-scraping của các sàn thương mại điện tử lớn.
 
 **Xử lý bất đồng (nếu có):**
-Thành viên Đỗ Hoàng Minh ban đầu muốn chọn bài toán Quét CVE máy chủ (#1). Sau khi phân tích, nhóm thấy rằng nếu quét CVE thì phụ thuộc việc có quyền SSH vào hạ tầng nội bộ hay không, khó kiểm chứng trong thời gian lab. Trong khi bài toán Viết báo cáo (#7) có quy trình khép kín và đo lường được hiệu quả ngay lập tức, Minh đã hoàn toàn đồng thuận cùng cả nhóm chọn #7.
+Ban đầu, bạn Đỗ Hoàng Minh và bạn Lê Quang Huy muốn ưu tiên các bài toán gần gũi với đời sống như tổng hợp tin tức hay so sánh giá mua hàng. Nhóm trưởng Nguyễn Hoàng Tùng đã điều phối buổi thảo luận, cùng nhóm phân tích theo ma trận 4 rủi ro của Marty Cagan. Cả nhóm nhận thấy các bài toán tiêu dùng gặp khó khăn lớn về tính khả thi (Feasibility - bị chặn cào dữ liệu) và tính khả dụng kinh doanh (Viability). Trong khi đó, bài toán Báo cáo an ninh mạng của bạn Nguyễn Văn Tùng có quy trình khép kín, khách hàng B2B doanh nghiệp sẵn sàng chi trả và đo lường được hiệu quả tiết kiệm thời gian ngay lập tức. Cả 4 thành viên đã đồng thuận 100% chọn đề tài của Nguyễn Văn Tùng.
 
 ---
 
