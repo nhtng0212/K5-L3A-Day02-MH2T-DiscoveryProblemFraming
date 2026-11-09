@@ -94,3 +94,21 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Nhận thức rõ ràng rằng trong an ninh mạng, việc giữ bí mật dữ liệu nội bộ (Data Privacy) và tính chính xác tuyệt đối của chứng cứ pháp lý quan trọng hơn việc chạy theo các công nghệ AI phức tạp.
 - Hiểu được giá trị của việc đặt ra ranh giới (Boundary): AI chỉ nên đóng vai trò trợ lực (Augmentation) cho con người ở khâu soạn thảo văn bản, còn dữ liệu kỹ thuật và quyền phê duyệt cuối cùng bắt buộc phải thuộc về chuyên gia.
+
+### lequanghuy-2A202603470
+
+**Phần việc phụ trách:**
+- Phụ trách kiểm chứng (The Mom Test) & ghi chép biên bản làm việc nhóm.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+- Chuẩn bị bộ câu hỏi phỏng vấn theo phương pháp The Mom Test để kiểm chứng bài toán chung của nhóm.
+- Trực tiếp phỏng vấn 2-3 đối tượng thật (người chịu ảnh hưởng bởi bài toán), ghi chép lại nguyên văn phản hồi (Interview Snapshots).
+- Ghi chép nội dung các buổi họp nhóm, đóng góp ý kiến phản biện ở phần chấm điểm OST và chọn lựa bài toán tại CP3.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- Mục CP4: Bảng Assumption Map và bảng Interview Snapshots trong file `report/team/group_report.md`.
+- Mục CP3: Biên bản ghi chép họp nhóm và bảng chấm điểm candidate trong `group_report.md`.
+
+**Điều mình học được từ phần nhóm:**
+- Hiểu cách đặt câu hỏi phỏng vấn theo The Mom Test (hỏi về trải nghiệm thực tế quá khứ thay vì hỏi giả định tương lai để tránh nhận lời khen sáo rỗng).
+- Biết cách tổng hợp thông tin từ nhiều ý kiến phản biện để cùng nhóm chốt được 1 bài toán thực sự có giá trị.
